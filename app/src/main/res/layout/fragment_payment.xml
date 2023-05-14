@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.payment.PaymentFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cardDetailsTv"
+        style="@style/Title.White.22"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_200"
+        android:padding="@dimen/space_8"
+        android:text="@string/please_enter_your_payment_card_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/paymentAmountTv"
+        style="@style/Title.Blue.18"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_8"
+        android:text="@string/amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDetailsTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/accountDescriptionTv"
+        style="@style/Title.Blue.18"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_8"
+        android:text="@string/account_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentAmountTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/attachedCardTv"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space_12"
+        android:text="@string/attached_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountDescriptionTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cardNumberTv"
+        style="@style/Title.Blue.18"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:paddingVertical="@dimen/space_6"
+        android:text="@string/your_card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attachedCardTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cardDescriptionTv"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:text="@string/enter_valid_card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberTv" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/cardNumberEt"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:hint="@string/hint_1234567898765432"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDescriptionTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cardNumberErrorMessage"
+        style="@style/Title.Red.12"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:text="@string/incorrect_card_number"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberEt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTv"
+        style="@style/Title.Blue.18"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:paddingVertical="@dimen/space_6"
+        android:text="@string/your_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberErrorMessage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameDescriptionTv"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:text="@string/as_stated_on_the_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/nameEt"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameDescriptionTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameErrorMessage"
+        style="@style/Title.Red.12"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:text="@string/please_fill_the_field"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/expirationDateTv"
+        style="@style/Title.Blue.18"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:paddingVertical="@dimen/space_6"
+        android:text="@string/card_expiration_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameErrorMessage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/expirationDateErrorMessage"
+        style="@style/Title.Red.12"
+        android:layout_width="@dimen/space_0"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:text="@string/card_expire_date_error_message"
+        app:layout_constraintEnd_toEndOf="@+id/expirationDateEt"
+        app:layout_constraintStart_toStartOf="@+id/expirationDateEt"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDateEt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/expirationDateEt"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:hint="@string/mm_yy"
+        android:inputType="number"
+        android:maxLength="5"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/dateGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDateTv" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/cardCvcEt"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_12"
+        android:layout_weight="1"
+        android:hint="@string/cvv"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dateGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDateTv" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cvcCodeErrorMessage"
+        style="@style/Title.Red.12"
+        android:layout_width="@dimen/space_0"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:text="@string/please_fill_the_field_correctly"
+        app:layout_constraintEnd_toEndOf="@+id/cardCvcEt"
+        app:layout_constraintStart_toStartOf="@+id/cardCvcEt"
+        app:layout_constraintTop_toBottomOf="@+id/cardCvcEt" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/payButton"
+        style="@style/MainButton"
+        android:layout_width="@dimen/space_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_12"
+        android:text="@string/pay"
+        app:layout_constraintEnd_toEndOf="@+id/cardDetailsTv"
+        app:layout_constraintStart_toStartOf="@+id/cardDetailsTv"
+        app:layout_constraintTop_toBottomOf="@+id/cvcCodeErrorMessage" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dateGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+</androidx.constraintlayout.widget.ConstraintLayout>
