@@ -19,7 +19,7 @@ class PaymentFragment : BaseFragment<PaymentViewModel, FragmentPaymentBinding>()
         super.onView()
         with(binding) {
             paymentAmountTv.text =
-                String.format("%s %d$", getString(R.string.amount), viewModel.generateRandomInt())
+                String.format("%s %d$", getString(R.string.amount), viewModel.randAmount)
 
             cardNumberEt.addTextChangedListener(CardNumberTextWatcher(cardNumberEt))
             cardNumberEt.doAfterTextChanged {

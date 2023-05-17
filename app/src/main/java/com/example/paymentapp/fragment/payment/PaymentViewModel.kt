@@ -24,7 +24,11 @@ class PaymentViewModel : BaseViewModel() {
     private val _cardFullValidation: MutableSharedFlow<Boolean> by lazy { MutableSharedFlow() }
     val cardFullValidation = _cardFullValidation.asSharedFlow()
 
+    var randAmount = 0
 
+    init {
+       randAmount = generateRandomInt()
+    }
     fun generateRandomInt(): Int {
         return Random.nextInt(1, 1001)
     }
